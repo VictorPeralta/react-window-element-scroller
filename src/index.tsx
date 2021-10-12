@@ -66,6 +66,18 @@ export type ReactWindowElementScrollerProps =
   | ReactWindowListElementScrollerProps
   | ReactWindowGridElementScrollerProps;
 
+/**
+ *
+ * @param type type - `grid` or `list`, specified what kind of `react-window` component it will wrap
+ * @param outerRef - ref for outer container of the `react-window` element
+ * @param listRef - ref of grid component, use only with `type='list'`
+ * @param gridRef - ref of grid component, use only with `type='grid'`
+ * @param throttleTime - Time in ms to throttle scroll actions
+ * @param childrenStyle - Style object that will be passed down to children, merged with a default
+ * @param scrollerElementRef? - Optional ref for an HTMLElement to use as scroller. If not available, defaults to window.
+ * @param children - Function that renders children, passes `style` and `onScroll` to children.
+ * @returns
+ */
 export const ReactWindowElementScroller = (
   props: ReactWindowElementScrollerProps
 ) => {
