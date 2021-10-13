@@ -127,10 +127,8 @@ export const ReactWindowElementScroller = (
       scrollTop += Math.min(top, offsetTop);
       scrollLeft += Math.min(left, offsetLeft);
       const scrollElementOrWindow = scrollerElementRef?.current || window;
-      console.log("before ifs", scrollOffset, scrollTop, top);
 
       if (type === "list" && scrollOffset !== top) {
-        console.log("list onscroll", scrollOffset, top);
         scrollElementOrWindow.scrollTo(0, scrollOffset);
       }
 
